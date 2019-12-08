@@ -9,9 +9,13 @@ def nyc_pigeon_organizer(data)
           result[name] = {}
           result [name][key] = []
         end
+
+        if result[name][key] == nil
+          result[name][key] = []
+        end
+        result[name][key] << new_value.to_s
       end
     end
   end
-
-  result        # write your code here!
+  result      # write your code here!
 end
